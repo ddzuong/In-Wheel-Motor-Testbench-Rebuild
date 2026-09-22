@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\rcc.o"
+".\objects\gpio.o"
+".\objects\afio.o"
+".\objects\exti.o"
+".\objects\tim.o"
+".\objects\adc.o"
+".\objects\uart.o"
+".\objects\can.o"
+".\objects\dma.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\stm32f1_register.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\stm32f1_register.map" -o .\Objects\stm32f1_register.axf
