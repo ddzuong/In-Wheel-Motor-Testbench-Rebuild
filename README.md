@@ -13,6 +13,13 @@ Dự án xây dựng lại hệ thống thu thập dữ liệu và giao tiếp C
 - Cảm biến Mô-mem xoắn (Burster 8645-5500)
 - Hệ thống thu thập dữ liệu và giám sát (Data Acquisition)
 
+## Tổng quan hệ thống 
+
+![Tổng quan về hệ thống băng thử động cơ](docs/images/results/TestBench_cad_overview.jpg)
+
+![Mặt trước cơ khí hệ thống băng thử động cơ](docs/images/results/TestBench_cad_front_view.jpg)
+
+![System Diagram](docs/images/results/System_Diagram.jpg)
 ### Phạm vi Repository
 
 Phạm vi này tập trung xây dựng lại phần hệ thống thu nhập dữ liệu (Data Acquisition)
