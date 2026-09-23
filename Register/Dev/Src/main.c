@@ -49,8 +49,8 @@ static volatile uint16_t adc_value[ADC_SAMPLE_TIME]; //Read Analog from PA1
 	
 	
 //------Analog value of Torque Sensor
-volatile float v_offset = 1.45f;	//V
-volatile float Sens = 0.00234f;		//V - Sensitivity
+volatile float v_offset = 1.318f;	//V
+volatile float Sens = 0.0024f;		//V - Sensitivity
 volatile float torque_Nm;
 	
 //------Status of Hub VESC-----
