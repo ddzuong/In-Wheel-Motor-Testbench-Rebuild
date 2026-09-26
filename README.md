@@ -133,7 +133,7 @@ Trong giao diện màn hình chính VESC Tool, chủ yếu chọn số cặp c�
 - Bước 3: Chọn số cực cho BLDC motor là 30 cực (15 cặp cực)
 - Bước 4: Chọn Start Detection
 
-Thông thường VESC Tool sẽ báo lỗi " NO HALL" đối với BLDC Motor, ta tiến hành setup thủ công ở mục Motor Settings--> FOC--->General--->Sensor mode: Hall-Sensors--->Detect and Calculate Parameters.
+Thông thường VESC Tool sẽ báo lỗi " Hall sensorless" đối với BLDC Motor, ta tiến hành setup thủ công ở mục Motor Settings--> FOC--->General--->Sensor mode: Hall-Sensors--->Detect and Calculate Parameters.
 Sau đó vào mục Hall Sensors ---> Start Detection ---> Apply
 
 ### Setup FOC for PMSM motor (Load Motor)
