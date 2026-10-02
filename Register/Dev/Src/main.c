@@ -197,7 +197,6 @@ while(1){
 			Num_Load_Level = 0;
 			VESC_SET_CURRENT_BRAKE(No_Load);
 		}
-		
 		//DMA_USART send Telemetry data
 		Telemetry_Send();
 	}
