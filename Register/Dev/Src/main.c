@@ -1,15 +1,4 @@
-#include <stdio.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include <string.h>
-#include "rcc.h"
-#include "gpio.h"
-#include "exti.h"
-#include "tim.h"
-#include "adc.h"
-#include "uart.h"
-#include "can.h"
-#include "dma.h"
+#include "main.h"
 
 //-----Torque_Nm-----
 #define ADC_SAMPLE_TIME	100
