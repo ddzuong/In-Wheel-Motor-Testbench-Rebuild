@@ -1,3 +1,4 @@
+//-----Lib-----//
 #include <stdint.h>
 #include <stdio.h>
 #include "can.h"
@@ -7,6 +8,22 @@
 
 #define ID_node_Hub		101U
 #define ID_node_Load	67U
+
+//-----Macro-----//
+
+//-----Typedef-----//
+
+volatile typedef struct{
+	volatile uint8_t EWGF;
+	volatile uint8_t EPVF;
+	volatile uint8_t BOFF;
+	volatile uint8_t LEC;
+	volatile uint8_t TEC;
+	volatile uint8_t REC;
+}CAN_Error_Status;
+CAN_Error_Status CAN_Error;
+
+//-----private code-----//
 
 volatile Status_Command Status_Hub;
 volatile Status_Command Status_Load;
@@ -345,10 +362,10 @@ void NVIC_CAN1_En(void){
 	NVIC_ISER0 |= (1 << 22);//Enable CAN1_SCE
 }
 
-//Ham check loi ngat
+//Ham xu li loi ngat
 
 volatile uint32_t CAN1_LastESR;
-volatile uint32_t CAN1_LastErr;
+volatile uint32_t CAN1_LastErr;	//LEC
 void CAN1_SCE_IRQHandler(void){
 	
 	uint32_t msr;
@@ -360,14 +377,24 @@ void CAN1_SCE_IRQHandler(void){
 	//Turn on Error interrupt ERRI
 	if((msr & (1 << 2))){
 		CAN1_LastESR = esr;
-		CAN1_LastErr |= ((uint8_t)(esr >> 4) & 0x07);
+		CAN1_LastErr = ((uint32_t)(esr >> 4) & 0x07);
 		CAN1_ESR &= ~(uint8_t)(0x07 << 4);
-		CAN1_MSR &= ~(uint8_t)(1 << 2);
+		CAN1_MSR |= (uint8_t)(1 << 2); //Writ
 	}
-} 
+}
+
+//Ham check trang thai loi ngat
+//void CAN_error_Status(uint32_t esr){
+//	CAN_Error.EWGF = (uint8_t)esr & 0x01;
+//	CAN_Error.EPVF = ((uint8_t)esr >> 1) & 0x01;
+//	CAN_Error.BOFF = ((uint8_t)esr >> 2) & 0x01;
+//	CAN_Error.LEC = ((uint8_t)esr >> 4) & 0x07;
+//	CAN_Error.TEC = ((uint32_t)esr >> 16) & 0x0F;
+//	CAN_Error.REC = ((uint32_t)esr >> 24) & 0x0F;
+//}
 
 void VESC_SET_CURRENT_BRAKE(float current){
-	CAN1_Frame_Type tx = {0};
+	CAN1_Frame_Type tx = {};
 	uint16_t exID =(uint16_t)((CAN_PACKET_SET_CURRENT_BRAKE << 8) | ID_node_Load);
 	uint32_t current_mA = current * 1000.0f;
 	uint32_t raw_current = (uint32_t)current_mA;
