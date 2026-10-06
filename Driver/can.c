@@ -13,15 +13,15 @@
 
 //-----Typedef-----//
 
-volatile typedef struct{
-	volatile uint8_t EWGF;
-	volatile uint8_t EPVF;
-	volatile uint8_t BOFF;
-	volatile uint8_t LEC;
-	volatile uint8_t TEC;
-	volatile uint8_t REC;
-}CAN_Error_Status;
-CAN_Error_Status CAN_Error;
+//volatile typedef struct{
+//	volatile uint8_t EWGF;
+//	volatile uint8_t EPVF;
+//	volatile uint8_t BOFF;
+//	volatile uint8_t LEC;
+//	volatile uint8_t TEC;
+//	volatile uint8_t REC;
+//}CAN_Error_Status;
+//CAN_Error_Status CAN_Error;
 
 //-----private code-----//
 
