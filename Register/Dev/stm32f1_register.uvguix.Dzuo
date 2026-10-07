@@ -106,8 +106,8 @@
       <flags>2</flags>
       <showCmd>3</showCmd>
       <MinPosition>
-        <xPos>-1</xPos>
-        <yPos>-1</yPos>
+        <xPos>-32000</xPos>
+        <yPos>-32000</yPos>
       </MinPosition>
       <MaxPosition>
         <xPos>-1</xPos>
@@ -3691,9 +3691,9 @@
       </Doc>
       <Doc>
         <Name>..\..\Driver\dma.c</Name>
-        <ColumnNumber>71</ColumnNumber>
+        <ColumnNumber>23</ColumnNumber>
         <TopLine>68</TopLine>
-        <CurrentLine>92</CurrentLine>
+        <CurrentLine>85</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
