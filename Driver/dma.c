@@ -82,14 +82,14 @@ void DMA1_Channel4_IRQHandler(void){
 	//Check error 
 	if(DMA_ISR & (1 << 15)){
 		DMA_CCR4 &= ~(1 << 0);//Disable channel 4
-		DMA_IFCR = (1 << 12);//Clear IT flag
+		DMA_IFCR = (1 << 15);//Clear channel error trasfer Interrupt flag 
 		dma_usart1_busy = false;
 	}
 	
 	//Complete transmit
 	if(DMA_ISR &(1 << 13)){
 		DMA_CCR4 &= ~(uint32_t)(1 << 0);//Disable channle 4
-		DMA_IFCR = (1 << 12);
+		DMA_IFCR = (1 << 12);//Clearf channel error complete interrupt flag
 		dma_usart1_busy = false;
 	}
 }
