@@ -328,7 +328,6 @@ File chương trình sau khi build:
 ```text
 Register/Dev/Objects/stm32f1_register.axf
 ```
-> Firmware có thể được build mà không cần phần cứng. Các chức năng CAN và torque sensor hiện được kiểm thử bằng STM32F407 mô phỏng; việc xác nhận toàn bộ hệ thống yêu cầu băng thử và các VESC thực tế.
 
 ## Kết quả thử nghiệm
 
@@ -344,7 +343,7 @@ Các chức năng đã được kiểm tra:
 > Trong quá trình rebuild, STM32F407 được sử dụng để mô phỏng tín hiệu torque sensor và các frame CAN của hai VESC. Các kết quả này không đại diện cho phép đo đầy đủ trên băng thử cơ khí thực tế.               
 
 ### Kết quả
-Các kết quả dưới đây được thu thập ở mức tay ga cố định 20% với STM32F4 mô phỏng hai VESC và cảm biến torque.
+Các kết quả dưới đây được thu thập ở mức tay ga cố định 20%.
 
 | Không tải                                                 | Tải nhẹ                                                 |
 |-----------------------------------------------------------|---------------------------------------------------------|
