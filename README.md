@@ -338,9 +338,7 @@ Các chức năng đã được kiểm tra:
 - Mức tải được lựa chọn bằng các ngõ vào GPIO PA1–PA3.
 - ADC1 và DMA thu thập tín hiệu mô phỏng torque sensor.
 - USART1 và DMA truyền liên tục frame telemetry 55 byte.
-- Ứng dụng Python đồng bộ, giải mã và hiển thị dữ liệu theo thời gian thực.
-
-> Trong quá trình rebuild, STM32F407 được sử dụng để mô phỏng tín hiệu torque sensor và các frame CAN của hai VESC. Các kết quả này không đại diện cho phép đo đầy đủ trên băng thử cơ khí thực tế.               
+- Ứng dụng Python đồng bộ, giải mã và hiển thị dữ liệu theo thời gian thực.              
 
 ### Kết quả
 Các kết quả dưới đây được thu thập ở mức tay ga cố định 20%.
